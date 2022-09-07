@@ -21,4 +21,6 @@
      (def left-y (get known-x left-x))
      (def right-y (get known-x right-x))
 
-     (find-slope left-x left-y right-x right-y))))
+     (def slope (find-slope left-x left-y right-x right-y))
+
+     (+ left-y (* slope (- x left-x))))))
