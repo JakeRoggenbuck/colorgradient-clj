@@ -20,3 +20,8 @@
 (deftest fract-test
   (testing "Pass one"
     (is (= 0.12300000000000022 (fract 2.123)))))
+
+(deftest find-y-test
+  (testing "Pass one"
+    (is (= (find-y 4 [3.3 3.4 4.5 4.6 6.6]) 6.6))
+    (is (= (find-y 0 [0.1 3.3 3.4 4.5 7.6 8.7]) 0.1))))

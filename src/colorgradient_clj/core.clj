@@ -12,3 +12,13 @@
 
 (defn fract [x]
   (- x (trunc x)))
+
+(defn find-y [x known-x]
+  (if (== (fract x) 0)
+    (get known-x x)
+    ((def left-x (trunc x))
+     (def right-x (+ left-x 1))
+     (def left-y (get known-x left-x))
+     (def right-y (get known-x right-x))
+
+     (find-slope left-x left-y right-x right-y))))
